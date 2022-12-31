@@ -347,18 +347,10 @@ class PlayState extends MusicBeatState
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
 
-		if (!pixelSongs.contains(SONG.song.toLowerCase()))
-		{
-			comboUI = new ComboPopup(boyfriend.x - 250, boyfriend.y - 75, ["ratings", 403, 163, true], ["numbers", 100, 120, true],
-				["comboBreak", 348, 211, true]);
-		}
-		else
-		{
-			comboUI = new ComboPopup(boyfriend.x - 250, boyfriend.y - 75, ["weeb/pixelUI/ratings-pixel", 51, 20, false],
-				["weeb/pixelUI/numbers-pixel", 11, 12, false], ["weeb/pixelUI/comboBreak-pixel", 53, 32, false],
-				[daPixelZoom * 0.7, daPixelZoom * 0.8, daPixelZoom * 0.7]);
-			comboUI.numberPosition[0] -= 120;
-		}
+		comboUI = new ComboPopup(boyfriend.x - 250, boyfriend.y - 75, ["weeb/pixelUI/ratings-pixel", 51, 20, false],
+			["weeb/pixelUI/numbers-pixel", 11, 12, false], ["weeb/pixelUI/comboBreak-pixel", 53, 32, false],
+			[daPixelZoom * 0.7, daPixelZoom * 0.8, daPixelZoom * 0.7]);
+		comboUI.numberPosition[0] -= 120;
 
 		if (Config.comboType == 1)
 		{
@@ -380,12 +372,6 @@ class PlayState extends MusicBeatState
 				comboUI.ratingPosition = [700, 80];
 				comboUI.numberPosition = [320, 100];
 				comboUI.breakPosition = [690, 85];
-			}
-
-			if (pixelSongs.contains(SONG.song.toLowerCase()))
-			{
-				comboUI.numberPosition[0] -= 120;
-				comboUI.setPosition(160, 60);
 			}
 		}
 

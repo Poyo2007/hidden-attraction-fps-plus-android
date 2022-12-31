@@ -35,7 +35,7 @@ class Character extends FlxSprite
 		switch (curCharacter)
 		{
 			case 'mania':
-				flipX = true
+				flipX = true;
 
 				animation.addByPrefix('idle', 'idle', 24, false);
 				animation.addByPrefix('singUP', 'up', 24, false);

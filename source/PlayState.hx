@@ -305,7 +305,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		defaultCamZoom = 0.9;
+		defaultCamZoom = 0.6;
 		curStage = 'stagemain';
 		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg'));
 		bg.antialiasing = true;
@@ -328,8 +328,8 @@ class PlayState extends MusicBeatState
 		switch (SONG.song.toLowerCase())
 		{
 			case "attraction":
-				dadBeats = [0, 1, 2, 3];
-				bfBeats = [0, 1, 2, 3];
+				dadBeats = [0, 2];
+				bfBeats = [0, 2];
 		}
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
@@ -2641,7 +2641,7 @@ class PlayState extends MusicBeatState
 			camChangeZoom(1.3, (Conductor.stepCrochet * 4 / 1000), FlxEase.elasticInOut);
 		}
 
-		camMove(followX, followY, 1.9, FlxEase.cubeInOut, "dad");
+		camMove(followX, followY, 1, FlxEase.cubeInOut, "dad");
 	}
 
 	function camFocusBF()
@@ -2654,7 +2654,7 @@ class PlayState extends MusicBeatState
 			camChangeZoom(1, (Conductor.stepCrochet * 4 / 1000), FlxEase.elasticInOut);
 		}
 
-		camMove(followX, followY, 1.9, FlxEase.quintOut, "bf");
+		camMove(followX, followY, 1, FlxEase.cubeInOut, "bf");
 	}
 
 	function camMove(_x:Float, _y:Float, _time:Float, _ease:Null<flixel.tweens.EaseFunction>, ?_focus:String = "",

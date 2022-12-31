@@ -31,7 +31,7 @@ class Character extends FlxSprite
 		var tex:FlxAtlasFrames;
 		antialiasing = true;
 
-		frames = Paths.getSparrowAtlas('characters/'curCharacter);
+		frames = Paths.getSparrowAtlas('characters/' + curCharacter);
 		switch (curCharacter)
 		{
 			case 'mania':

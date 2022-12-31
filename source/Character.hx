@@ -63,6 +63,7 @@ class Character extends FlxSprite
 				addOffset("singLEFT", -4, 30);
 				addOffset("singDOWN", -90, 1);
 		}
+		playAnim('idle');
 		dance();
 
 		if (isPlayer)

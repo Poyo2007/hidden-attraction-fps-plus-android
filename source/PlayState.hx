@@ -2657,7 +2657,7 @@ class PlayState extends MusicBeatState
 		switch (dad.curCharacter)
 		{
 			case "mania":
-				followY -= 140
+				followY -= 140;
 		}
 
 		/*if (dad.curCharacter == 'mom')

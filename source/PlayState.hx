@@ -310,8 +310,8 @@ class PlayState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
-		bg.scale.set(3, 3);
-		bg.active = false;
+		bg.scale.x = 3;
+		bg.scale.y = 3;
 		add(bg);
 
 		gf = new Character(0, 0, 'mania');

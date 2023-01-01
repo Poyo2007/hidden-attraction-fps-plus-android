@@ -310,18 +310,18 @@ class PlayState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg'));
 		bg.antialiasing = true;
 		bg.scrollFactor.set(0.9, 0.9);
-		bg.scale.x = 6;
-		bg.scale.y = 6;
+		bg.scale.x = 3;
+		bg.scale.y = 3;
 		add(bg);
 
 		gf = new Character(0, 0, 'mania');
 		gf.scrollFactor.set(0.95, 0.95);
 
 		var dadChar = SONG.player2;
-		dad = new Character(770, 1000, dadChar);
+		dad = new Character(-290, 190, dadChar);
 
 		var bfChar = SONG.player1;
-		boyfriend = new Boyfriend(1600, 559, bfChar);
+		boyfriend = new Boyfriend(620, -109, bfChar);
 
 		add(dad);
 		add(boyfriend);

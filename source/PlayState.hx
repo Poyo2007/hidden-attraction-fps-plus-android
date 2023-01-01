@@ -2469,7 +2469,7 @@ class PlayState extends MusicBeatState
 
 		if (curBeat == 63 && curSong.toLowerCase() == 'attraction') {
 			gayass = true;
-			boyfriend.play.animation('gay', true);
+			boyfriend.animation.play('gay', true);
 		}
 		if (curBeat == 64 && curSong.toLowerCase() == 'attraction') {
 			gayass = false;

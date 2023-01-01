@@ -182,7 +182,7 @@ class StoryMenuState extends MusicBeatState
 
 		scoreText.text = "WEEK SCORE:" + lerpScore;
 
-		txtWeekTitle.text = weekNames[curWeek]();
+		txtWeekTitle.text = weekNames[curWeek];
 		txtWeekTitle.x = FlxG.width - (txtWeekTitle.width + 10);
 
 		// FlxG.watch.addQuick('font', scoreText.font);
@@ -369,7 +369,7 @@ class StoryMenuState extends MusicBeatState
 
 		txtTracklist.text += "\n";
 
-		txtTracklist.text = txtTracklist.text();
+		txtTracklist.text = txtTracklist.text;
 
 		txtTracklist.screenCenter(X);
 		txtTracklist.x -= FlxG.width * 0.35;

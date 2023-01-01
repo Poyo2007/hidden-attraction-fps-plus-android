@@ -1590,7 +1590,10 @@ class PlayState extends MusicBeatState
 				var difficulty:String = "";
 
 				if (storyDifficulty == 0)
-					difficulty = '-easy';
+					difficulty = '-hard';
+
+				if (storyDifficulty == 1)
+					difficulty = '-hard';
 
 				if (storyDifficulty == 2)
 					difficulty = '-hard';
@@ -2274,7 +2277,7 @@ class PlayState extends MusicBeatState
 				health += 0.0015 * Config.healthMultiplier;
 			}
 
-			if (boyfriend.canAutoAnim)
+			if (boyfriend.canAutoAnim && !gayass)
 			{
 				switch (note.noteData)
 				{
@@ -2656,8 +2659,8 @@ class PlayState extends MusicBeatState
 
 	function camFocusBF()
 	{
-		var followX = boyfriend.getMidpoint().x - 100;
-		var followY = boyfriend.getMidpoint().y - 100;
+		var followX = boyfriend.getMidpoint().x + 150;
+		var followY = boyfriend.getMidpoint().y - 250;
 
 		if (SONG.song.toLowerCase() == 'tutorial')
 		{

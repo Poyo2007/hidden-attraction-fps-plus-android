@@ -22,8 +22,8 @@ class HealthIcon extends FlxSprite
 		super();
 		loadGraphic(Paths.image('iconGrid'), true, 150, 150);
 
-		animation.add('mania', [0, 1, 30], 0, false, isPlayer);
-		animation.add('fq', [0, 1, 30], 0, false, isPlayer);
+		animation.add('mania', [0, 1, 0], 0, false, isPlayer);
+		animation.add('fq', [2, 3, 2], 0, false, isPlayer);
 
 		iconSize = width;
 

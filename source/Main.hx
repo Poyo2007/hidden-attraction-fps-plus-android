@@ -9,7 +9,7 @@ class Main extends Sprite
 {
 	public static final framerate:Int = #if desktop 144 #else 60 #end;
 
-	public static var novid:Bool = false;
+	public static var novid:Bool = true;
 	public static var flippymode:Bool = false;
 
 	public function new()

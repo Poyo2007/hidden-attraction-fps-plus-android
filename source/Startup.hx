@@ -31,8 +31,7 @@ class Startup extends FlxState
 	var songsCached:Bool;
 
 	public static final songs:Array<String> = [
-		"Tutorial", "Bopeebo", "Fresh", "Dadbattle", "Spookeez", "South", "Monster", "Pico", "Philly", "Blammed", "Satin-Panties", "High", "Milf", "Cocoa",
-		"Eggnog", "Winter-Horrorland", "Senpai", "Roses", "Thorns", "klaskiiLoop", "freakyMenu"
+		"attraction", "klaskiiLoop", "freakyMenu"
 	]; // Start of the non-gameplay songs.
 
 	// List of character graphics and some other stuff.
@@ -42,26 +41,8 @@ class Startup extends FlxState
 	var charI:Int = 0;
 
 	public static final characters:Array<String> = [
-		"BOYFRIEND",
-		"bfCar",
-		"christmas/bfChristmas",
-		"weeb/bfPixel",
-		"weeb/bfPixelsDEAD",
-		"GF_assets",
-		"gfCar",
-		"christmas/gfChristmas",
-		"weeb/gfPixel",
-		"DADDY_DEAREST",
-		"spooky_kids_assets",
-		"Monster_Assets",
-		"Pico_FNF_assetss",
-		"Mom_Assets",
-		"momCar",
-		"christmas/mom_dad_christmas_assets",
-		"christmas/monsterChristmas",
-		"weeb/senpai",
-		"weeb/spirit",
-		"weeb/senpaiCrazy"
+		"characters/mania",
+		"characters/fq"
 	];
 
 	var graphicsCached:Bool;
@@ -69,12 +50,8 @@ class Startup extends FlxState
 	var gfxI:Int = 0;
 
 	public static final graphics:Array<String> = [
-		"logoBumpin", "logoBumpin2", "titleBG", "gfDanceTitle", "gfDanceTitle2", "titleEnter", "stageback", "stagefront", "stagecurtains", "halloween_bg",
-		"philly/sky", "philly/city", "philly/behindTrain", "philly/train", "philly/street", "philly/win0", "philly/win1", "philly/win2", "philly/win3",
-		"philly/win4", "limo/bgLimo", "limo/fastCarLol", "limo/limoDancer", "limo/limoDrive", "limo/limoSunset", "christmas/bgWalls", "christmas/upperBop",
-		"christmas/bgEscalator", "christmas/christmasTree", "christmas/bottomBop", "christmas/fgSnow", "christmas/santa", "christmas/evilBG",
-		"christmas/evilTree", "christmas/evilSnow", "weeb/weebSky", "weeb/weebSchool", "weeb/weebStreet", "weeb/weebTreesBack", "weeb/weebTrees",
-		"weeb/petals", "weeb/bgFreaks", "weeb/animatedEvilSchool"
+		"logoBumpin", "logoBumpin2", "titleBG", "gfDanceTitle", "gfDanceTitle2", "titleEnter", 
+		"bg"
 	];
 
 	var cacheStart:Bool = false;

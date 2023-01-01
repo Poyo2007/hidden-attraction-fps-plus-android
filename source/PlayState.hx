@@ -2642,8 +2642,9 @@ class PlayState extends MusicBeatState
 
 		switch (dad.curCharacter)
 		{
-			case "mania":
-				followY -= 140;
+			case "fq":
+				followX += 230;
+				followY -= 30;
 		}
 
 		/*if (dad.curCharacter == 'mom')
@@ -2659,8 +2660,8 @@ class PlayState extends MusicBeatState
 
 	function camFocusBF()
 	{
-		var followX = boyfriend.getMidpoint().x + 150;
-		var followY = boyfriend.getMidpoint().y - 250;
+		var followX = boyfriend.getMidpoint().x - 100;
+		var followY = boyfriend.getMidpoint().y - 100;
 
 		if (SONG.song.toLowerCase() == 'tutorial')
 		{

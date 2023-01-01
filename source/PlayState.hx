@@ -227,6 +227,8 @@ class PlayState extends MusicBeatState
 
 	private var meta:SongMetaTags;
 
+	var gayass:Bool = false;
+
 	override public function create()
 	{
 		instance = this;
@@ -309,7 +311,7 @@ class PlayState extends MusicBeatState
 		curStage = 'stagemain';
 		var bg:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('bg'));
 		bg.antialiasing = true;
-		bg.scrollFactor.set(0.9, 0.9);
+		bg.scrollFactor.set(1, 1);
 		bg.scale.x = 3;
 		bg.scale.y = 3;
 		add(bg);
@@ -692,7 +694,7 @@ class PlayState extends MusicBeatState
 					dad.dance();
 				}
 
-			if (bfBeats.contains((swagCounter % 4)))
+			if (bfBeats.contains((swagCounter % 4)) && !gayass)
 				if (swagCounter != 4)
 				{
 					boyfriend.dance();
@@ -2465,6 +2467,14 @@ class PlayState extends MusicBeatState
 		}
 		// FlxG.log.add('change bpm' + SONG.notes[Std.int(curStep / 16)].changeBPM);
 
+		if (curBeat == 63 && curSong.toLowerCase() == 'attraction') {
+			gayass = true;
+			boyfriend.play.animation('gay', true);
+		}
+		if (curBeat == 64 && curSong.toLowerCase() == 'attraction') {
+			gayass = false;
+		}
+
 		// HARDCODING FOR MILF ZOOMS!
 		if (curSong.toLowerCase() == 'milf' && curBeat >= 168 && curBeat <= 200 && camZooming && FlxG.camera.zoom < 1.35)
 		{
@@ -2499,7 +2509,7 @@ class PlayState extends MusicBeatState
 			gf.dance();
 		}
 
-		if (bfBeats.contains(curBeat % 4) && boyfriend.canAutoAnim)
+		if (bfBeats.contains(curBeat % 4) && boyfriend.canAutoAnim && !gayass)
 			boyfriend.dance();
 
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
